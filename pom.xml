@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.leo</groupId>
+    <artifactId>netty_demo</artifactId>
+    <packaging>pom</packaging>
+    <name>Your first Netty Application</name>
+    <version>1.0-SNAPSHOT</version>
+
+
+
+
+    <description>
+        Build an Echo Server and Client
+    </description>
+    <modules>
+        <module>echo-server</module>
+        <module>echo-client</module>
+    </modules>
+    <properties>
+        <echo-server.hostname>localhost</echo-server.hostname>
+        <echo-server.port>8848</echo-server.port>
+    </properties>
+    <!--引入netty-->
+    <dependencies>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.36.Final</version>
+        </dependency>
+
+    </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
